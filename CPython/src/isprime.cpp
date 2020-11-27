@@ -39,9 +39,7 @@ static PyObject *run_program(PyObject *self, PyObject *args) {
     } else {
         N = PyLong_AsLong(args);
     }
-    
-    N += 1;
-    
+
     for (int i = 0; i < N; i++) {
         is_prime(self, PyLong_FromLong(i));
     }
