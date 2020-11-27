@@ -1,7 +1,7 @@
 from distutils.core import setup, Extension
 
 module1 = Extension("isprime",
-                    sources=["isprime.cpp"], 
+                    sources=["src/isprime.cpp"], 
                     language='c++')
 
 setup(name            = "isprime",
