@@ -48,8 +48,11 @@ static PyObject *run_program(PyObject *self, PyObject *args) {
 
 static PyObject *check_primes(PyObject *self, PyObject *args, PyObject *kwargs) {
     int N = 10000000;
-    const char *keywords[5] = {"N", NULL};
-    PyArg_ParseTupleAndKeywords(args, kwargs, "|i", const_cast<char **>(keywords), &N);
+    const char *keywords[2] = {"N", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "|i", const_cast<char **>(keywords), &N)){
+        return NULL;
+    }
 
     clock_t start, end;
     start = clock();
