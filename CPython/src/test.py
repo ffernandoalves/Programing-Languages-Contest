@@ -2,8 +2,8 @@ import re, os
 import isprime
 
 def get_primes(p):
-    assert isprime.is_prime(p), f"""{p} - Fail."""
-    print(f"{p} - Sucess!")
+    assert isprime.is_prime(p), f"""{p} - Failure."""
+    print(f"{p} - Success!")
 
 def confirmed_prime_numbers():
     PRIMES = []
